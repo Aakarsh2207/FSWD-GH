@@ -79,10 +79,10 @@
     font-size: 30px;
     font-weight: 400;
 }
-
-
+     /*Day3*/
+/* title white box combined */
 .hero__section_input_container{
-    background-color: white;
+    background-color: white; /*white color in-between the 2boxes*/
     padding: 10px;
     display: flex;
     align-items: center;
@@ -96,26 +96,26 @@
 .input__container_location, .input__container_search{
     padding: 5px;
     border: none;
-    outline: none;
+    outline: none;  /*removing border & outlines for clear views from Main Title White Box*/
 }
 
 
 .input__container_location{
-    width: 35%;
-    border-right: 2px solid #e0e0e0;
+    width: 35%;     /*###allocating particular space for each box*/
+    border-right: 2px solid #e0e0e0;     /*code for Grey color*/
 }
 
 .input__container_search{
-    width: 75%;
+    width: 75%;     /*###allocating particular space for each box*/
 }
 
-
-.conatiner{
+     /*Day4*/
+.conatiner{     /*To fix size of each image*/
     margin: 3rem auto;
     width: 90%;
 }
 
-.we__offer{
+.we__offer{      /*To align images & text in centre*/
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -124,7 +124,7 @@
 }
 
 
-.we__offer_card{
+.we__offer_card{     /*To get border radius and smooth border(curvy) using overflow*/
     border-radius: 10px;
     /* background-color: yellow; */
     overflow: hidden;
