@@ -377,7 +377,7 @@
 }
 
 
-/* @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {      /* For Phone Screen size */
 
     .get__the_app {
         padding: 3rem 0;      /* 0-for not having left & right spacing for smaller screen size */
@@ -387,9 +387,9 @@
         width: 80%;
         flex-direction: column;
     }
-} */
+}
 
-
+      /* Day7 */
 .footer{
     width: 100%;
 }
@@ -413,7 +413,7 @@
     gap: 1rem;
 }
 
-.section1__buttonContainer button{
+.section1__buttonContainer button{      /* Styling Country & Language Buttons */
     padding: 5px;
     width: 90px;
     border: 1px solid gray;
@@ -428,13 +428,13 @@
 
 
 .navigation_container{
-    display: grid;
+    display: grid;      /* Applying Grids (5Columns) */
     /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
-    grid-template-columns: repeat(5, 1fr);
-    width: 80%;
-    margin: auto;
-    gap: 1rem;
-    padding: 3rem 0;
+    grid-template-columns: repeat(5, 1fr);      /* Above line can be written shorty as this, meaning, "1fr" is repeated "5"times */
+    width: 80%;      /* Take only 80 % of the screen */
+    margin: auto;      /* Make it centre */
+    gap: 1rem;      /* Giving some space in between Columns */
+    padding: 3rem 0;      /* Top & Bottom-3rem ;&; Left & Right-0 */
 }
 
 .link__container{
@@ -443,7 +443,7 @@
     gap: 5px;
 }
 
-.link__container h5{
+.link__container h5{      /* Redsigning Headings */
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 5px;
@@ -452,65 +452,11 @@
 
 .footer__link{
     text-decoration: none;
-    color: gray;
+    color: gray;      /* Deafult Color to Grey... */
     font-size: 12px;
     font-weight: 300;
 }
 
 .footer__link:hover{
-    color: black;
-}
-
-
-.social__links_conatiner button{
-    background-color: black;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-}
-
-.social__links_conatiner button i{
-    color: white;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer__section_logos{
-    width: 100%;
-}
-
-
-.disclaimer{
-    width: 90%;
-    margin: auto;
-    color: gray;
-    border-top: 1px solid gray;
-    font-size: 12px;
-    padding: 1.5rem 0;
-}
-
-
-/*  */
-@media only screen and (max-width: 900px){
-    .navigation_container{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-@media only screen and (max-width: 480px) {
-    .navigation_container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-@media only screen and (max-width: 350px) {
-    .navigation_container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+    color: black;      /* ...& on hovering, color changes to BLACK */
 }
