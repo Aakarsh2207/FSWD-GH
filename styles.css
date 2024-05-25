@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.hero__section{
+    background-image: url(images/heroSectionBackground.png);
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 16px 40px;
+}
+
+.navbar  a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar__menu_container{
+    display: flex;
+    gap: 20px;
+}
+
+
+.navbar__menu_container .user__icon{
+    height: 30px;
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+/* Media Queries: */
+@media only screen and (max-width: 600px){
+    .navbar__menu_container .user__icon {
+        display: flex;
+    }
+    .link{
+        display: none;
+    }
+    .hero__section{
+        min-height: 80vh;
+    }
+}
+
+
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    height: calc(60vh-60px);
+}
+
+.hero__section_logo{
+    width: 200px;
+    height: auto;
+}
+
+.hero__section_title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+     /*Day3*/
+/* title white box combined */
+.hero__section_input_container{
+    background-color: white; /*white color in-between the 2boxes*/
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+
+.input__container_location, .input__container_search{
+    padding: 5px;
+    border: none;
+    outline: none;  /*removing border & outlines for clear views from Main Title White Box*/
+}
+
+
+.input__container_location{
+    width: 35%;     /*###allocating particular space for each box*/
+    border-right: 2px solid #e0e0e0;     /*code for Grey color*/
+}
+
+.input__container_search{
+    width: 75%;     /*###allocating particular space for each box*/
+}
+
+     /*Day4*/
+.conatiner{     /*To fix size of each image*/
+    margin: 3rem auto;
+    width: 90%;
+}
+
+.we__offer{      /*To align images & text in centre*/
+    display: flex;
+    flex-wrap: wrap;     /*NOTE.... To wrap images properly & provide good view for different Screen Orientations (like Media Qurries)*/
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.we__offer_card{     /*To get border radius and smooth border(curvy) of image using overflow*/
+    border-radius: 10px;
+    /* background-color: yellow; */
+    overflow: hidden;     /*To get smooth edges*/
+    border: 1px solid #e0e0e0;     /*Grey Color*/
+    transition: all 0.3s ease;
+}
+
+.we__offer_card:hover{
+    transform: scale(1.05);     /*To provide Howver effects*/
+}
+
+.we__offer_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;     /*To fit images to objects properly...*/
+    object-position: center;        /*To fit images to objects properly...*/
+}
+
+
+.we__offer_content{
+    padding: 10px;
+}
+
+.we__offer_content h2{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.we__offer_content p{
+    font-size: 12px;
+
+}
+/* Day5 */
+.collections{      /* To define space taken on screen by Texts */
+    width: 80%;
+    margin: auto;
+}
+
+
+.collections h1{
+    font-weight: 600;
+}
+
+.sub__heading_container{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ...Applying styles to 2nd span child of sub__heading_container */
+.sub__heading_container span:nth-child(2){
+    color: #ff7e8b;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.collections_card_container{
+    display: flex;      /* TO get contents on the same line */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;      /* Line added on Day6 - it will make things look good in different orientations(Media Queries) */
+}
+
+      /* Designing each card in same way */
+.card{
+    height: 300px;
+    min-width: 240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;      /* Images are the parent so Relative */
+}
+      /* Adding images behind content/text */
+.card1{
+    background-image: url('images/collection1.jpg');
+}
+
+.card2 {
+    background-image: url('images/collection2.jpg');
+}
+
+.card3 {
+    background-image: url('images/collection3.jpg');
+}
+
+.card4 {
+    background-image: url('images/collection4.jpg');
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3052871148459384) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);      /* To apply Linear Gradients from CSS Gradient Website */
+    /* z-index: 1; */       /* #---It will apply Gradient Effects (dull) on the text as well, IF COMMENTED, FONT COLOR IS TOP OF THE GRADIENT */    /* ---If Grandients are not working in your machine, we can go by the 3D dimension using "z-index" */
+}
+      /* Applying styles to the Texts */
+.content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    /* z-index: 2; */      /* ---Also, ---if the contents are not clearly visible, we can go by the 3D dimension using "z-index" */
+}
+
+.content h4{
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+      /* Day6 */
+.get__the_app{      /* HTML158 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 251, 247);
+    width: 100%;
+    padding: 3rem 6rem;
+}
+
+.semiContainer{      /* To apply same styles for left & right */
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+
+.left{
+    flex: 2;      /* ...Keeping the ratio - left:right - 2:3 */
+}
+
+.left img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.right{
+    flex: 3;        /* ...Keeping the ratio - left:right - 2:3 */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.right p{
+    font-size: 0.8rem;
+}
+
+.radio__buttons_container{
+    display: flex;      /* Alligning 2 radio buttons on the same line */
+    align-items: center;
+    gap: 1rem;
+}
+
+.radio__buttons_container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.radio__buttons_container div input{      /* Changing input colors displayed */
+    accent-color: rgb(239, 79, 95);      /* To change the Radio Button Default BLUE color to Desired REDISH-PINK color */
+    height: 15px;
+    width: 15px;
+}
+
+.input_container{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.input_container button, .input_container input{
+    padding: 10px 12px;
+}
+
+.input_container input {      /* Enter Email Box modifying */
+    flex: auto;
+    border: 1.5px solid gray;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input_container button{      /* Share App Link button modifying */
+    border: none;
+    background-color: rgb(239, 79, 95);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download_app_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.download_app_container h5{
+    font-weight: 400;
+    color: gray;
+}
+
+.download_app_container div{      /* ALligning the Download App Store & Googlr Play buttons */
+    display: flex;
+    gap: 1rem;
+}
+
+.download_app_container div img{
+    width: 35%;
+}
+      /* Using MEDIA QUERIES for different screen size */
+@media only screen and (max-width: 1300px){
+    .left, .right{
+        flex: 1;
+    }
+    .semiContainer{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .get__the_app{
+        padding: 2rem;
+    }
+
+    .semiContainer {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {      /* For Phone Screen size */
+
+    .get__the_app {
+        padding: 3rem 0;      /* 0-for not having left & right spacing for smaller screen size */
+    }
+
+    .semiContainer {
+        width: 80%;
+        flex-direction: column;
+    }
+}
+
+      /* Day7 */
+.footer{
+    width: 100%;
+}
+
+.footer_section1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer_section1 img{
+    width: 120px;
+}
+
+
+.section1__buttonContainer{
+    display: flex;
+    gap: 1rem;
+}
+
+.section1__buttonContainer button{      /* Styling Country & Language Buttons */
+    padding: 5px;
+    width: 90px;
+    border: 1px solid gray;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.navigation_container{
+    display: grid;      /* Applying Grids (5Columns) */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5, 1fr);      /* Above line can be written shorty as this, meaning, "1fr" is repeated "5"times */
+    width: 80%;      /* Take only 80 % of the screen */
+    margin: auto;      /* Make it centre */
+    gap: 1rem;      /* Giving some space in between Columns */
+    padding: 3rem 0;      /* Top & Bottom-3rem ;&; Left & Right-0 */
+}
+
+.link__container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link__container h5{      /* Redsigning Headings */
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px;
+}
+
+.footer__link{
+    text-decoration: none;
+    color: gray;      /* Deafult Color to Grey... */
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.footer__link:hover{
+    color: black;      /* ...& on hovering, color changes to BLACK */
+}
+      /* Day8 */
+      /* Redisigning Social Media Footer Icons */
+.social__links_conatiner button{
+    background-color: black;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.social__links_conatiner button i{
+    color: white;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__section_logos{
+    width: 100%;
+}
+
+      /* HTML270 */
+.disclaimer{
+    width: 90%;
+    margin: auto;
+    color: gray;
+    border-top: 1px solid gray;
+    font-size: 12px;
+    padding: 1.5rem 0;
+}
+
+
+/* Media Queries for Media Query will be applicable on Screen Size when its less than 900pixels, 480px & 300px */
+@media only screen and (max-width: 900px){
+    .navigation_container{      /* HTML209 */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .navigation_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .navigation_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
